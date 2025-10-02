@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier-scss"
+  ],
+  "rules": {
+    "indentation": 2,
+    "number-leading-zero": "always",
+    "string-quotes": "double",
+    "color-hex-length": "short"
+  }
+}
