@@ -1,6 +1,5 @@
 
 
-// Import ảnh (đổi tên/file cho đúng dự án của bạn)
 import featuredImg from "../assets/images/blog-1.jpg";
 import thumbImg from "../assets/images/23a6a4b5676fa0783705c435293b4a3cf866dc69.jpg";
 

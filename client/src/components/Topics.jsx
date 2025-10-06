@@ -1,6 +1,4 @@
 import { useState } from "react";
-
-// Nếu ảnh đang ở src/assets/img (khuyên dùng import)
 import imgBeer from "../assets/images/topic1 (1).jpg";
 import imgWine from "../assets/images/topic1 (2).jpg";
 import imgSpirit from "../assets/images/topic1 (3).jpg";

@@ -1,8 +1,5 @@
 // src/components/Resources.jsx
 import Slider from "react-slick";
-
-
-// Import ảnh (Vite)
 import img1 from "../assets/images/rest1 (1).jpg";
 import img2 from "../assets/images/rest1 (2).jpg";
 import img3 from "../assets/images/rest1 (3).jpg";
