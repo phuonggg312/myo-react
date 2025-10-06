@@ -24,6 +24,11 @@
   place-items: center;
   z-index: 5;
   cursor: pointer;
+
+  // Ẩn arrow mặc định của slick để không bị duplicate
+  &::before {
+    content: none !important;
+  }
 }
 
 
@@ -47,7 +52,7 @@
         height: $size;
         border-radius: 50%;
         background: $inactive-color;
-        opacity: 1;
+        opacity: 100%;
       }
     }
 

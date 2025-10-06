@@ -1,6 +1,6 @@
 export default function Subscribe() {
   const onSubmit = (e) => {
-    e.preventDefault(); // chặn reload
+    e.preventDefault(); 
     // TODO: calc API / show toast here
   };
 

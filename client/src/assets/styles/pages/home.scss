@@ -7,6 +7,12 @@
   position: relative;
   overflow: hidden;
 
+  .slick-slide {
+    >div {
+      width: 100%;
+      height: 100%;
+    }
+  }
 
   .slick-dots {
     position: absolute;
@@ -36,10 +42,9 @@
     top: 50%;
     transform: translateY(-50%);
 
-    &::before {
-      font-size: 28px;
+    i {
+      font-size: 18px;
       color: #fff;
-      opacity: 1;
     }
   }
 
@@ -88,7 +93,7 @@
       font-family: v.$font-heading;
       font-weight: 600;
       line-height: 1.05;
-      font-size: 90px;
+      font-size: 128px;
       letter-spacing: .5px;
       margin: 40px 0 12px;
       margin-left: 30px;
@@ -109,18 +114,18 @@
 .category {
   padding: 28px 0 24px;
 
-.cate-tt {
-  @extend %section-title;
+  .cate-tt {
+    @extend %section-title;
 
-  font-family: "Mango Grotesque";
-  font-weight: 700; // gọi đúng bản Bold
-  font-size: 64px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: v.$color-ink;
-  margin: 0 0 6px;
-}
+    font-family: "Mango Grotesque";
+    font-weight: 700; // gọi đúng bản Bold
+    font-size: 64px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: v.$color-ink;
+    margin: 0 0 6px;
+  }
 
 
   .cate-desc {
@@ -181,6 +186,10 @@
       padding: 0 12px;
       box-sizing: border-box;
       outline: none;
+
+      >div {
+        width: 100%;
+      }
     }
 
     .cate-arrow {
@@ -266,7 +275,7 @@
       left: 50%;
       bottom: 12px;
       transform: translate(-50%, 8px);
-      opacity: 0;
+      opacity: 0%;
       visibility: hidden;
       pointer-events: none;
       transition: opacity .2s, transform .2s, filter .2s;
@@ -286,7 +295,7 @@
     }
 
     &:hover .cate-btn {
-      opacity: 1;
+      opacity: 100%;
       visibility: visible;
       pointer-events: auto;
       transform: translate(-50%, 0);
@@ -305,6 +314,11 @@
 
   .slick-slide {
     outline: none;
+
+    >div {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .hin-arrow {
@@ -350,7 +364,7 @@
 
 .hero-in-bg {
   position: relative;
-  height: 150vh;
+  height: 100vh;
   display: grid;
   place-items: center;
   text-align: center;
@@ -411,7 +425,7 @@
   display: none;
 }
 
-@media (width <= 768px) {
+@media (width <=768px) {
   .topics--pc {
     display: none;
   }
@@ -460,7 +474,7 @@
       border-radius: 12px 12px 0 0;
       display: grid;
       place-items: center;
-      opacity: 1;
+      opacity: 100%;
       visibility: visible;
       transform: translateY(0);
       transition: opacity .25s, transform .25s;
@@ -481,7 +495,7 @@
       color: #fff;
       text-align: center;
       box-shadow: 0 6px 16px rgb(0 0 0 / 12%);
-      opacity: 0;
+      opacity: 0%;
       visibility: hidden;
       pointer-events: none;
       transform: translateY(14px);
@@ -513,13 +527,13 @@
     }
 
     &:hover .topic-bar {
-      opacity: 0;
+      opacity: 0%;
       visibility: hidden;
       transform: translateY(12px);
     }
 
     &:hover .topic-panel {
-      opacity: 1;
+      opacity: 100%;
       visibility: visible;
       pointer-events: auto;
       transform: translateY(0);
@@ -611,7 +625,7 @@
       margin-top: 0;
       max-height: 0;
       overflow: hidden;
-      opacity: .0;
+      opacity: 0%;
       transition: max-height .28s ease, opacity .2s ease;
       display: grid;
       gap: 12px;
@@ -634,11 +648,7 @@
 
     &.is-open .mb-panel {
       max-height: 300px;
-      opacity: 1;
-    }
-
-    &.is-open .mb-head[aria-expanded] {
-      aria-expanded: true;
+      opacity: 100%;
     }
   }
 }
@@ -651,9 +661,9 @@
   .brew-tt {
     @extend %section-title;
 
-  margin-top: 20px;
-  color: #20222a;
-  font-size: clamp(64px, 3.2vw, 64px);
+    margin-top: 20px;
+    color: #20222a;
+    font-size: clamp(64px, 3.2vw, 64px);
   }
 
   .brew-sub {
@@ -747,6 +757,10 @@
       padding: 10px 12px;
       box-sizing: border-box;
       outline: none;
+
+      >div {
+        width: 100%;
+      }
     }
 
     .cate-arrow {
@@ -910,7 +924,7 @@
     margin-top: auto;
     display: flex;
     gap: 8px;
-    opacity: 0;
+    opacity: 0%;
     visibility: hidden;
     pointer-events: none;
     transform: translateY(6px);
@@ -939,7 +953,7 @@
   }
 
   &:hover .p-actions {
-    opacity: 1;
+    opacity: 100%;
     visibility: visible;
     pointer-events: auto;
     transform: translateY(0);
@@ -1009,7 +1023,7 @@
       color: v.$color-ink;
       text-decoration: none;
       font-weight: 100;
-      opacity: 0;
+      opacity: 0%;
       visibility: hidden;
       pointer-events: none;
       transform: translateY(6px);
@@ -1018,7 +1032,7 @@
   }
 
   &:hover .promo-ct .promo-btn {
-    opacity: 1;
+    opacity: 100%;
     visibility: visible;
     pointer-events: auto;
     transform: translateY(0);
@@ -1098,7 +1112,7 @@
     font-family: v.$font-body;
 
     .dot {
-      opacity: .5;
+      opacity: 50%;
     }
   }
 
@@ -1241,6 +1255,7 @@
 
   .t-slider {
     position: relative;
+    overflow: hidden;
   }
 
   .t-track {
@@ -1256,14 +1271,19 @@
 
   .t-slider .slick-list {
     margin: 0 -12px;
-    overflow: visible;
+    overflow: hidden;
   }
 
   .t-slider .slick-slide {
     padding: 62px 12px;
     box-sizing: border-box;
     outline: none;
-    height: 250px;
+    height: auto;
+    min-height: 250px;
+
+    >div {
+      width: 100%;
+    }
   }
 
 
@@ -1276,7 +1296,7 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    margin: 0 12px;
+    height: 100%;
 
     .t-stars {
       color: #f5a623;
@@ -1304,9 +1324,15 @@
     height: 36px;
     background: v.$color-pill;
     color: #fff;
+    z-index: 10;
 
     i {
       font-size: 14px;
+      color: #fff;
+    }
+
+    &:hover {
+      background: darken(v.$color-pill, 10%);
     }
   }
 
@@ -1345,26 +1371,22 @@
   .brands-logos {
     list-style: none;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
     max-width: 1100px;
-    display: grid;
+    display: blog;
     grid-template-columns: repeat(6, minmax(0, 1fr));
-    gap: 26px;
+    gap: 20px;
     place-items: center center;
 
-    li {
-      display: flex;
-      align-items: center;
-      justify-content: center;
 
-      img {
-        max-width: 200px;
-        max-height: 100px;
-        width: auto;
-        height: auto;
-        object-fit: contain;
-        display: block;
-      }
+
+    img {
+      align-items: center;
+      width: auto;
+      height: 80px;
+      object-fit: contain;
+      display: block;
+
     }
   }
 
@@ -1383,6 +1405,10 @@
 
     .slick-slide {
       padding: 0 12px;
+
+      >div {
+        width: 100%;
+      }
     }
 
     li {
@@ -1447,12 +1473,18 @@
       height: 6px;
       border-radius: 100%;
       background: #c9c9c9;
-      opacity: 1;
+      opacity: 100%;
     }
 
     li.slick-active button::before {
       background: #20222a;
     }
+  }
+
+  .brand-item {
+    align-items: center;
+    display: flex !important;
+    justify-content: center;
   }
 }
 
@@ -1463,10 +1495,11 @@
   .about-title {
     @extend %section-title;
 
-    font-size: 42px;
+    font-size: 64px;
     line-height: 1.1;
     text-transform: uppercase;
     margin-bottom: 12px;
+    text-align: justify;
   }
 
   .about-text {
@@ -1485,9 +1518,9 @@
     place-items: center center;
 
     li img {
-      width: 200px;
+      width: 180px;
       ;
-      height: 200px;
+      height: 180px;
       gap: 10px;
       object-fit: contain;
       display: block;
@@ -1496,7 +1529,73 @@
 }
 
 /* ---------------- RESPONSIVE ---------------- */
-@media (width <= 640px) {
+@media (width <=992px) {
+  .hero-section {
+    .hero-ct {
+      margin: 80px 24px 80px 40px;
+
+      .hero-title {
+        font-size: clamp(64px, 10vw, 96px);
+      }
+    }
+  }
+
+  .hero-in-section {
+    .hero-in-ct {
+      .hero-in-tt {
+        font-size: clamp(48px, 8vw, 72px);
+      }
+
+      .hero-in-desc {
+        font-size: clamp(14px, 3vw, 16px);
+      }
+    }
+  }
+
+  .category {
+    .cate-tt {
+      font-size: clamp(36px, 5vw, 64px);
+    }
+  }
+
+  .upsell-carousel {
+    &__title {
+      font-size: clamp(36px, 5vw, 64px);
+    }
+  }
+
+  .testimonials {
+    .t-title {
+      font-size: clamp(32px, 5vw, 62px);
+    }
+
+    .t-slider .slick-slide {
+      padding: 40px 12px;
+    }
+
+    .t-arrow {
+      width: 32px;
+      height: 32px;
+    }
+
+    .t-prev {
+      left: 0;
+    }
+
+    .t-next {
+      right: 0;
+    }
+  }
+
+  .brands-section {
+    .brands-title {
+      font-size: clamp(36px, 5vw, 64px);
+    }
+  }
+
+}
+
+@media (width <=640px) {
   .hero-section {
     padding-top: 60px;
     height: 72vh;
@@ -1516,6 +1615,98 @@
       .hero-desc {
         font-size: clamp(14px, 3.6vw, 16px);
       }
+    }
+
+    .hero-in-section .slick-dots {
+      bottom: 12px;
+      gap: 8px;
+    }
+  }
+
+  .hero-in-section {
+    .hero-in-ct {
+      padding: 0 24px;
+
+      .hero-in-tt {
+        font-size: clamp(32px, 8vw, 48px);
+      }
+
+      .hero-in-desc {
+        font-size: clamp(13px, 3.5vw, 15px);
+      }
+    }
+
+    .hin-arrow {
+      width: 36px;
+      height: 36px;
+
+      i {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .category {
+    .cate-tt {
+      font-size: clamp(28px, 7vw, 48px);
+    }
+
+    .cate-arrow {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .upsell-carousel {
+    &__title {
+      font-size: clamp(28px, 7vw, 48px);
+    }
+
+    .cate-arrow {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .testimonials {
+    padding: 60px 18px 36px;
+
+    .t-title {
+      font-size: clamp(24px, 6vw, 36px);
+    }
+
+    .t-slider .slick-slide {
+      padding: 30px 8px;
+    }
+
+    .t-card {
+      padding: 16px;
+      min-height: 180px;
+    }
+
+    .t-arrow {
+      width: 28px;
+      height: 28px;
+
+      i {
+        font-size: 12px;
+      }
+    }
+
+    .t-prev {
+      left: -4px;
+    }
+
+    .t-next {
+      right: -4px;
+    }
+  }
+
+  .brands-section {
+    padding: 60px 18px 40px;
+
+    .brands-title {
+      font-size: clamp(28px, 7vw, 48px);
     }
   }
 

@@ -1,11 +1,16 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import CategoryHeading from "../components/CategoryHeading";
+import Resources from "../components/Resources";
+import UpsellCarousel from "../components/UpsellCarousel";
+import RecentlyViewed from "../components/RecentlyViewed";
+import kv from "../components/kv";
 export default function PLP() {
   return (
     <>
-      <Header />
-      <main style={{padding:16}}>PLP page</main>
-      <Footer />
+     <CategoryHeading/>
+     {/* <kv/> */}
+     <RecentlyViewed/>
+     <UpsellCarousel/>
+     <Resources/>
     </>
   );
 }

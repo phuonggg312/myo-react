@@ -1,21 +1,26 @@
-import Header from "../components/Header";
 
 import Category from "../components/Category";
-
-import Subscribe from "../components/Subscribe";   
-
-import Footer from "../components/Footer";
+import HeroInSection from "../components/HeroInSection";
 import HeroSlider from "../components/HeroSlider";
+import AboutBadges from "../components/AboutBadges";
+import Brands from "../components/Brands";
+import Topics from "../components/Topics";
+import UpsellCarousel from "../components/UpsellCarousel";
+import Blog from "../components/Blog";
+import Testimonials from "../components/Testimonials";
 export default function Home() {
   return (
-    <>
-    
-      <Header />
-      
+    <>  
       <HeroSlider />
       <Category/>
-      <Subscribe />
-      <Footer />
+      <Topics/>
+      <UpsellCarousel/>
+      <HeroInSection/>
+      <Blog/>
+      <Testimonials/>
+      <AboutBadges/>
+      <Brands/>
+    
     </>
   );
 }
