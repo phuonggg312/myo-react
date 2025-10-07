@@ -1,14 +1,23 @@
 import { useParams } from "react-router-dom";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-
+import RecentlyViewed from "../components/RecentlyViewed";
+import RecommendedCarousel from "../components/RecommendedCarousel";
+import EquipmentHero from "../components/EquipmentHero";
+import HowToBrew from "../components/HowToBrew";
+import BrewFlow from "../components/BrewFlow";
+import ProductTabs from "../components/ProductTabs";
+import PDPHero from "../components/PDPHero";
 export default function PDP() {
   const { id } = useParams();
   return (
     <>
-      <Header />
-      <main style={{padding:16}}>PDP page #{id}</main>
-      <Footer />
+      <main style={{ padding: 16 }}>PDP page #{id}</main>
+      <PDPHero/>
+      <ProductTabs/>
+      <BrewFlow/>
+      <HowToBrew />
+      <EquipmentHero />
+      <RecommendedCarousel />
+      <RecentlyViewed />
     </>
   );
 }

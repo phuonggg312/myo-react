@@ -1,5 +1,7 @@
 // src/components/Category.jsx
 import  { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
+
 import Slider from "react-slick";
 import cateimg from "../assets/images/category.png";
 
@@ -101,7 +103,8 @@ const NextArrow = (props) => {
                 <img src={cateimg} alt="Category" />
                 <h4 className="cate-title">CATEGORY</h4>
                 <p className="cate-description">Short descriptions of Category</p>
-                <button className="cate-btn">SHOP NOW</button>
+                {/* <button className="cate-btn">SHOP NOW</button> */}
+                <Link className="cate-btn" to="/category">SHOP NOW</Link>
               </div>
             </div>
           ))}

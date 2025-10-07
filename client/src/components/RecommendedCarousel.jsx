@@ -40,15 +40,15 @@ export default function RecentlyViewed({ data = items }) {
     nextArrow: <Arrow dir="next" />,
     responsive: [
       { breakpoint: 1400, settings: { slidesToShow: 3 } },
-      { breakpoint: 992, settings: { slidesToShow: 2 } },
-      { breakpoint: 640, settings: { slidesToShow: 2 } },
+      { breakpoint: 992,  settings: { slidesToShow: 2 } },
+      { breakpoint: 640,  settings: { slidesToShow: 2 } },
     ],
   };
 
   return (
     <section className="rv-carousel">
       <header className="rv-carousel__header">
-        <h2 className="rv-carousel__title">Recently viewed</h2>
+        <h2 className="rv-carousel__title">You also might like</h2>
       </header>
 
       <div className="rv-carousel__viewport">
@@ -57,11 +57,10 @@ export default function RecentlyViewed({ data = items }) {
             <div key={p.id} className="rv-carousel__item">
               <article className="product-card product-card--best-seller">
                 <div className="product-card__media">
-                  <Link to={`../product/${p.id}`} className="product-card__media">
-                    <img className="product-card__img" src={p.img} alt={p.title} />
+                       <Link to={`../product/${p.id}`} className="product-card__media">
 
-                  </Link>
-
+                  <img className="product-card__img" src={p.img} alt={p.title} />
+</Link>
                   <span className="product-card__badge product-card__badge--best-seller">Best seller</span>
                 </div>
 

@@ -8,29 +8,6 @@ import wines from "../assets/images/wines.png";
 import hand from "../assets/images/hand.png";
 import mad from "../assets/images/mad.png";
 
-const PrevArrow = ({ className, style, onClick }) => (
-  <button
-    type="button"
-    className={`brands-arrow brands-prev ${className || ""}`}
-    style={style}
-    onClick={onClick}
-    aria-label="Previous"
-  >
-    <i className="fa-solid fa-arrow-left" />
-  </button>
-);
-
-const NextArrow = ({ className, style, onClick }) => (
-  <button
-    type="button"
-    className={`brands-arrow brands-next ${className || ""}`}
-    style={style}
-    onClick={onClick}
-    aria-label="Next"
-  >
-    <i className="fa-solid fa-arrow-right" />
-  </button>
-);
 
 const Brands = () => {
   const logos = [grain, jacks, still, wines, hand, mad];
@@ -41,8 +18,7 @@ const Brands = () => {
     infinite: false,
     arrows: false,
     dots: false,
-    prevArrow: <PrevArrow />,
-    nextArrow: <NextArrow />,
+
     responsive: [
       {
         breakpoint: 768,

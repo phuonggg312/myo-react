@@ -19,8 +19,7 @@ export default function Home() {
       <Blog/>
       <Testimonials/>
       <AboutBadges/>
-      <Brands/>
-    
+      <Brands/>   
     </>
   );
 }

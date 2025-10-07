@@ -28,21 +28,21 @@ const TESTIMONIALS = [
   {
     id: 1,
     quote:
-      "A customer testimonial that highlights features and answers potential customer doubts...",
+      "A customer testimonial that highlights features and answers potential customer doubts about your product or service. Showcase testimonials from a similar demographic to your customers.",
     name: "Customer Name",
     stars: 5,
   },
   {
     id: 2,
     quote:
-      "A customer testimonial that highlights features and answers potential customer doubts...",
+      "A customer testimonial that highlights features and answers potential customer doubts about your product or service. Showcase testimonials from a similar demographic to your customers.",
     name: "Customer Name",
     stars: 5,
   },
   {
     id: 3,
     quote:
-      "A customer testimonial that highlights features and answers potential customer doubts...",
+      "A customer testimonial that highlights features and answers potential customer doubts about your product or service. Showcase testimonials from a similar demographic to your customers.",
     name: "Customer Name",
     stars: 5,
   },

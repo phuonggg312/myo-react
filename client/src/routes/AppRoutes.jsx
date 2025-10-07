@@ -8,11 +8,13 @@ export default function AppRoutes() {
   return (
     <Routes>
       <Route element={<MainLayout />}>
-        <Route index element={<Home />} />          {/* "/" */}
-        <Route path="plp" element={<PLP />} />
-        <Route path="pdp" element={<PDP />} />
+        <Route index element={<Home />} />                {/* "/" -> render to Outlet */}
+        <Route path="category">
+          <Route index element={<PLP />} />               {/* "/category" -> Outlet */}
+          <Route path="product/:id" element={<PDP />} />  {/* "/category/product/42" -> Outlet */}
+        </Route>
       </Route>
-
     </Routes>
+
   );
 }

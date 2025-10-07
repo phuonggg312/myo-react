@@ -1,4 +1,3 @@
-
 @use '../core/variables' as *;
 @use '../core/mixins' as m;
 
@@ -55,7 +54,7 @@
     }
 }
 
-@media (width <= 768px) {
+@media (width <=768px) {
     .breadcrumb {
         height: 44px;
 
@@ -394,7 +393,7 @@ button.btn.btn--primary {
 }
 
 /* mobile */
-@media (width <= 520px) {
+@media (width <=520px) {
     .pad-card--features {
         width: auto;
         margin: 12px 16px 0;
@@ -480,7 +479,7 @@ button.btn.btn--primary {
 
 #panel-desc {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 40px;
     align-items: start;
     padding: 24px 20px;
@@ -601,18 +600,18 @@ button.btn.btn--primary {
     border-radius: 8px 8px 0 0;
 }
 
-.feature__cell--smooth{
+.feature__cell--smooth {
     justify-content: flex-end;
 }
 
 /* ===== Responsive ===== */
-@media (width <= 1100px) {
+@media (width <=1100px) {
     #panel-desc,
     #panel-man,
     #panel-spec,
     #panel-inc,
     #panel-rev {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
         row-gap: 18px;
     }
 }
@@ -637,7 +636,7 @@ button.btn.btn--primary {
 .p-tabs__tab::after {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
-    content: "\f078"; 
+    content: "\f078";
     opacity: 90%;
     transition: transform .3s ease;
     font-size: 12px;
@@ -647,7 +646,7 @@ button.btn.btn--primary {
 
 .p-tabs__tab.is-open::after {
     transform: rotate(180deg);
-    content: "\f077"; 
+    content: "\f077";
 }
 
 .p-tabs__tab.is-active::before {
@@ -655,7 +654,7 @@ button.btn.btn--primary {
 }
 
 @media (width <=768px) {
-    .p-tabs{
+    .p-tabs {
         padding-top: 20px;
     }
 
@@ -678,7 +677,7 @@ button.btn.btn--primary {
         border-radius: 0;
         height: auto;
         min-height: 56px;
-        margin-bottom:0;
+        margin-bottom: 0;
         text-align: left;
         font-size: 16px;
         font-weight: 600;
@@ -755,11 +754,11 @@ button.btn.btn--primary {
     }
 }
 
-@media (width >= 768px) {
+@media (width >=768px) {
     .p-tabs__tab::after {
         display: none;
     }
-    
+
     .p-tabs__tab.is-active::before {
         display: block;
     }
@@ -932,7 +931,7 @@ button.btn.btn--primary {
         display: block;
     }
 
-    @media (width <= 768px) {
+    @media (width <=768px) {
         margin: 40px auto;
 
         &__title {
@@ -1223,7 +1222,7 @@ $product-img: 328px;
 }
 
 /* --------- Mobile layout (max 600px) --------- */
-@media (width <= 600px) {
+@media (width <=600px) {
     .product-carousel__list {
         gap: 12px;
         padding: 0;
@@ -1375,13 +1374,13 @@ $product-img: 328px;
     right: 24px;
 }
 
-@media (width >= 992px) {
+@media (width >=992px) {
     .cate-arrow {
         top: calc(328px / 2 + 24px);
     }
 }
 
-@media (width <= 768px) {
+@media (width <=768px) {
     .cate-arrow {
         width: 36px;
         height: 36px;
@@ -1439,10 +1438,11 @@ $ink: #20222a;
 .kvp__slide {
     position: relative;
     height: 700px;
-    
 
-    @media (width <= 768px) {
+
+    @media (width <=768px) {
         height: 383px;
+        width: 100%;
     }
 }
 
@@ -1475,7 +1475,7 @@ $ink: #20222a;
     margin: 0 auto;
     text-align: center;
 
-    @media (width <= 768px) {
+    @media (width <=768px) {
         max-width: 90%;
         gap: 10px;
     }
@@ -1502,7 +1502,7 @@ $ink: #20222a;
     letter-spacing: 1.1px;
     opacity: 95%;
 
-    @media (width <= 768px) {
+    @media (width <=768px) {
         font-size: 14px;
     }
 }
@@ -1522,6 +1522,7 @@ $ink: #20222a;
     color: #fff;
     cursor: pointer;
     backdrop-filter: blur(2px);
+    font-size: 14px;
 
     img {
         width: 20px;
@@ -1535,7 +1536,7 @@ $ink: #20222a;
         background: rgb(255 255 255 / 20%);
     }
 
-    @media (width <= 768px) {
+    @media (width <=768px) {
         padding: 8px 12px;
         font-size: 13px;
     }
@@ -1578,7 +1579,7 @@ $ink: #20222a;
         right: 24px;
     }
 
-    @media (width <= 768px) {
+    @media (width <=768px) {
         width: 36px;
         height: 36px;
 
@@ -1612,7 +1613,7 @@ $ink: #20222a;
     object-fit: cover;
 }
 
-@media (width <= 768px) {
+@media (width <=768px) {
     .kvp {
         height: 383px;
     }
@@ -1634,7 +1635,8 @@ $ink: #20222a;
     }
 
     .kvp__title {
-        width: 343px;
+        max-width: 90%;
+        width: auto;
         letter-spacing: 2.3px;
         font-size: 56px;
         font-weight: 800;
@@ -1643,15 +1645,11 @@ $ink: #20222a;
     .kvp__desc {
         font-size: 16px;
         font-weight: 400;
-        width: 343px;
+        max-width: 90%;
+        width: auto;
         padding: 0;
         line-height: 20px;
         letter-spacing: 0.6px;
-    }
-
-    .product-carousel__title {
-        font-size: 40px;
-        letter-spacing: 1.3px;
     }
 
     .product-card {
@@ -1700,8 +1698,8 @@ $ink: #20222a;
 
     .brew-flow__art {
         background:
-            url("../img/image 2.png") left center / 50% 100% no-repeat,
-            url("../img/image 2.png") right center / 50% 100% no-repeat;
+            url("../../images/image 2.png") left center / 50% 100% no-repeat,
+            url("../../images/image 2.png") right center / 50% 100% no-repeat;
     }
 
     .brew-flow__art img {
@@ -1748,7 +1746,7 @@ $ink: #20222a;
     padding-top: 10px;
 }
 
-@media (width <= 768px) {
+@media (width <=768px) {
     .brew-flow__title {
         font-size: 40px;
     }
@@ -1769,7 +1767,7 @@ $ink: #20222a;
         display: block;
         width: 105%;
         aspect-ratio: 343 / 248;
-        background: url("/assets/img/image 2.png") no-repeat center / cover;
+        background: url("../../images/image 2.png") no-repeat center / cover;
         border-radius: 12px;
     }
 
@@ -1804,7 +1802,7 @@ $ink: #20222a;
     .pdp-card {
         position: relative;
         z-index: 2;
-        padding-top:26px !important;
+        padding-top: 26px !important;
     }
 
     #mainImage.pdp__hero-bg {
@@ -1971,7 +1969,7 @@ $ink: #20222a;
     border-radius: 999px;
 }
 
-@media (width <= 1000px) {
+@media (width <=1000px) {
     .product-carousel__list {
         gap: 12px;
         padding: 0;
@@ -2086,7 +2084,7 @@ $ink: #20222a;
     height: 700px;
 
 
-    @media (width <= 768px) {
+    @media (width <=768px) {
         height: 383px;
     }
 }
@@ -2120,7 +2118,7 @@ $ink: #20222a;
     margin: 0 auto;
     text-align: center;
 
-    @media (width <= 768px) {
+    @media (width <=768px) {
         max-width: 90%;
         gap: 10px;
     }
@@ -2148,7 +2146,7 @@ $ink: #20222a;
     opacity: 95%;
     line-height: 100%;
 
-    @media (width <= 768px) {
+    @media (width <=768px) {
         font-size: 14px;
     }
 }
@@ -2181,7 +2179,7 @@ $ink: #20222a;
         background: rgb(255 255 255 / 20%);
     }
 
-    @media (width <= 768px) {
+    @media (width <=768px) {
         padding: 8px 12px;
         font-size: 13px;
     }
@@ -2224,7 +2222,7 @@ $ink: #20222a;
         right: 24px;
     }
 
-    @media (width <= 768px) {
+    @media (width <=768px) {
         width: 36px;
         height: 36px;
 

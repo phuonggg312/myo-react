@@ -1,7 +1,5 @@
 // src/components/HeroIn.jsx
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import bg01 from "../assets/images/09fa047f7ef2a641caaec5922d4d21f8ae752b1c.png";
 import playIcon from "../assets/images/Vector.png";
 

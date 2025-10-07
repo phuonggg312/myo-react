@@ -3,22 +3,23 @@ import Slider from "react-slick";
 
 
 import kitImg from "../assets/images/2135f58d00265db5b7d52f0fd792171c018b7be2.png";
+import { Link } from "react-router-dom";
 
 const DATA = [
-  { id: 1, cat: "beer",  title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
-  { id: 2, cat: "beer",  title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
-  { id: 3, cat: "beer",  title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
-  { id: 4, cat: "beer",  title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
-  { id: 5, cat: "brew",  title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
-  { id: 6, cat: "beer",  title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
-  { id: 7, cat: "brew",  title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
-  { id: 8, cat: "brew",  title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
-  { id: 9, cat: "beer",  title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
-  { id: 10, cat:"beer",  title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
-   { id: 11, cat: "beer",  title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
-  { id: 12, cat: "brew",  title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
-  { id: 13, cat: "brew",  title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
-  { id: 14, cat: "beer",  title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
+  { id: 1, cat: "beer", title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
+  { id: 2, cat: "beer", title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
+  { id: 3, cat: "beer", title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
+  { id: 4, cat: "beer", title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
+  { id: 5, cat: "brew", title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
+  { id: 6, cat: "beer", title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
+  { id: 7, cat: "brew", title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
+  { id: 8, cat: "brew", title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
+  { id: 9, cat: "beer", title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
+  { id: 10, cat: "beer", title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
+  { id: 11, cat: "beer", title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
+  { id: 12, cat: "brew", title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
+  { id: 13, cat: "brew", title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
+  { id: 14, cat: "beer", title: "Home Brew Kit 2", price: 75, old: 85, reviews: 12, img: kitImg },
 ];
 
 const PrevArrow = ({ className, style, onClick }) => (
@@ -63,9 +64,9 @@ export default function UpsellCarousel() {
     nextArrow: <NextArrow />,
     responsive: [
       { breakpoint: 1200, settings: { slidesToShow: 3 } },
-      { breakpoint: 992,  settings: { slidesToShow: 3 } },
-      { breakpoint: 768,  settings: { slidesToShow: 2, dots: true } },
-      { breakpoint: 220,  settings: { slidesToShow: 1, dots: true } },
+      { breakpoint: 992, settings: { slidesToShow: 3 } },
+      { breakpoint: 768, settings: { slidesToShow: 2, dots: true } },
+      { breakpoint: 220, settings: { slidesToShow: 1, dots: true } },
     ],
   };
 
@@ -79,7 +80,7 @@ export default function UpsellCarousel() {
           <div className="cate-bg">
             {[
               { key: "brew", label: "Beer Starter" },
-              { key: "beer", label: "Brew Master"  },
+              { key: "beer", label: "Brew Master" },
             ].map((tab) => (
               <button
                 key={tab.key}
@@ -102,7 +103,10 @@ export default function UpsellCarousel() {
             <div key={p.id} className="upsell-carousel__item" data-cat={p.cat}>
               <article className="product-card product-card--best-seller">
                 <div className="product-card__media">
-                  <img className="product-card__img" src={p.img} alt={p.title} />
+                  <Link to={`/category/product/${p.id}`} className="product-card__img-link">
+                    <img className="product-card__img" src={p.img} alt={p.title} />
+
+                  </Link>
                   <span className="product-card__badge product-card__badge--best-seller">Best seller</span>
                 </div>
 
